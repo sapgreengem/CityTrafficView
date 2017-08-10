@@ -1407,7 +1407,7 @@ void updateSun(int value)
 		}
 	}
 	glutPostRedisplay(); //Tell GLUT that the display has changed	 
-	glutTimerFunc(50, updateSun, 0);//Tell GLUT to call update again in 50 milliseconds
+	glutTimerFunc(100, updateSun, 0);//Tell GLUT to call update again in 50 milliseconds
 }
 
 void updateCar(int value)
@@ -1546,9 +1546,9 @@ void main(int argc, char** argv)
 	glutDisplayFunc(myDisplay);
 	myInit();
 	lightSetting();
-	glutFullScreen();
+	//glutFullScreen();
 	glutKeyboardFunc(keyboard);
-	glutTimerFunc(50, updateSun, 0);
+	glutTimerFunc(100, updateSun, 0);
 	glutTimerFunc(5, updateCar, 0);
 	glutMainLoop();
 }
